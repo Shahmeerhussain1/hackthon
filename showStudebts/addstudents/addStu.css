@@ -1,6 +1,11 @@
-body {
+
+@font-face {
+  font-family: mfont;
+  src: url(/fonts/JosefinSans-Regular.ttf);
+}body {
   margin: 0 auto;
   background-color: #F5F6F8 !important;
+  font-family: mfont;
 }
 nav {
   height: 65px;

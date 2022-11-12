@@ -38,7 +38,10 @@ search.addEventListener("click", async () => {
   const q = query(collection(db, "Students"), where("rollno", "==", rno.value));
   const querySnapshot = await getDocs(q);
   querySnapshot.forEach((doc) => {
-    if (doc.id || doc.data()) {
+    console.log(doc.id);
+    console.log(doc.id, " => ", doc.data());
+
+    if (doc.id) {
       file.innerHTML = `  <hr><hr> <div id="foto">
   <img src="/imgs/pr.jpg" alt="">
 </div>
@@ -83,13 +86,16 @@ search.addEventListener("click", async () => {
   <label for="LA">LA</label>
 </form>
 </td></tr>
-<tr id="hid"><td><input type="text" placeholder="enter passward" id="spass"></td><td><button onclick="chkpass()">Check</button></td></tr>
-<tr><th><button onclick="atten(${doc.data().rollno})">Submit</button></th></tr>
+<tr id="hid"><td><input type="text" placeholder="enter passward" id="spass"></td><td><button onclick="chkpass(${
+        doc.data().rollno
+      })">Check</button></td></tr>
+<tr><th><button class="subbtn" onclick="atten(${
+        doc.data().rollno
+      })">Submit</button></th></tr>
 </table>`;
     } else {
       swal("Not Found");
     }
-    console.log(doc.id, " => ", doc.data());
   });
 });
 const atten = async (no) => {
@@ -113,28 +119,26 @@ const atten = async (no) => {
     chk = LA.value;
   }
   console.log(chk);
-  if (chk == "LE") {
-    hid.style.display = "block"
-    
-   } else {
-        await setDoc(doc(db, "Attendence", no), {
-          Date: new Date(),
-          Remarks: chk.value,
-        });
-      }
-    }
-  
+  if (chk.value !== "LE") {
+    await setDoc(doc(db, "Attendence", no), {
+      Date: new Date(),
+      Remarks: chk.value,
+    });
+  } else {
+    hid.style.display = "block";
+  }
+};
 
-const chkpass=async()=>{
-      let spass = document.getElementById("spass")
-      if(spass.value == "123456"){
-        await setDoc(doc(db, "Attendence", no), {
-          Date: new Date(),
-          Remarks: "LE",
-        });
-        location.reload()
-      }
-}
+const chkpass = async (nos) => {
+  let spass = document.getElementById("spass");
+  if (spass.value == "123456") {
+    await setDoc(doc(db, "Attendence", nos), {
+      Date: new Date(),
+      Remarks: "LE",
+    });
+    location.reload();
+  }
+};
 const addstudents = () => {
   window.location = "/showStudebts/addstudents/add.html";
 };
@@ -156,4 +160,4 @@ const back = () => {
 };
 window.back = back;
 window.atten = atten;
-window.chkpass=chkpass
+window.chkpass = chkpass;

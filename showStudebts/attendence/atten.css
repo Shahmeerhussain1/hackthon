@@ -1,14 +1,21 @@
-nav {
+
+@font-face {
+  font-family: mfont;
+  src: url(/fonts/JosefinSans-Regular.ttf);
+}  body{
+    margin: 0 auto;
+    background-color: #F5F6F8 !important;
+    font-family: mfont ;
+  }nav {
     height: 65px;
     display: flex;
     box-shadow: 0 1px 6px 0 rgb(32 33 36 / 28%);
     background-color: #563D7C;
     color: white;
+  }h1{
+    margin-bottom: 0;
   }
-  body{
-    margin: 0 auto;
-    background-color: #F5F6F8 !important;
-  }
+
   
   #navSub1 {
     width: 50%;
@@ -114,6 +121,12 @@ nav {
   #hid{
     display: none;
 
+  }
+  .subbtn{
+
+    border: 1px solid #563D7C;
+    background-color: #563D7C;
+    color: white;
   }
   #hid button{
     color: white;

@@ -73,6 +73,9 @@ nav {
 }
 #Showstutable {
 }
+th{
+  font-weight: 300;
+}
 
 nav {
   height: 65px;
