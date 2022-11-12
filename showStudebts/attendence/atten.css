@@ -4,6 +4,10 @@ nav {
     box-shadow: 0 1px 6px 0 rgb(32 33 36 / 28%);
     background-color: white;
   }
+  body{
+    margin: 0 auto;
+    background-color: #F5F6F8 !important;
+  }
   
   #navSub1 {
     width: 50%;
@@ -85,4 +89,33 @@ nav {
   .navli4Media:hover {
     box-shadow: 5px 5px 15px gray;
   }
-  
+  h3{
+    text-align: center;
+    margin-top: 30px !important;
+  }
+  #uppr{
+    display: flex;
+    justify-content: center;
+  }
+  #lowr{
+    width: 90%;
+  }
+  #upflex{
+    display: flex;
+    justify-content: center;
+  }
+  #finder{
+    background-color: #ffff;
+  }
+  #file{
+    margin-top: 20px;
+  }
+  #foto{
+    display: flex;
+    justify-content: center;
+  }
+  #foto img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+  }

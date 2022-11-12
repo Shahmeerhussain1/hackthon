@@ -91,3 +91,8 @@ window.addstudents = addstudents;
 window.createclass = createclass;
 window.availablestudents = availablestudents;
 window.attendence = attendence;
+
+const back=()=>{
+  window.location="/showStudebts/show.html"
+}
+window.back=back

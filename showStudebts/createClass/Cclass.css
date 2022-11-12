@@ -1,5 +1,6 @@
 body {
   margin: 0 auto;
+  background-color: #F5F6F8 !important;
 }
 nav {
   height: 65px;
@@ -217,4 +218,45 @@ nav {
     display: none;
     width: 100% !important;
 
+  }@media only screen and (max-width: 1024px) {
+    .forMobFriendly {
+      display: block;
+    }
+    .navli1,
+    .navli2,
+    .navli3,
+    .navli4 {
+      display: none;
+    }
+  }
+  .inpflx{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 8px;
+    /* background-color: lightgray; */
+  }
+  .inpflx input{
+    border: 0.5px solid lightgray;
+    padding: 5px 7px;
+    width: 60%;
+    background-color: #DEDEDE;
+    /* border-radius: 15px; */
+  }
+  .inpflx input:focus{
+    outline: none;
+  }
+  #registerstubtn{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+  }
+  #registerstubtn button{
+    width: 90%;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 7px;
+    background-color: gray;
+    color: white;
   }

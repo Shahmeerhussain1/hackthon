@@ -1,42 +1,188 @@
-body{
-    margin: auto 0;
+body {
+  margin: auto 0;
+  background-color: #F5F6F8 !important;
 }
 nav {
-    height: 65px;
-    display: flex;
-    box-shadow: 0 1px 6px 0 rgb(32 33 36 / 28%);
-  }
+  height: 65px;
+  display: flex;
+  box-shadow: 0 1px 6px 0 rgb(32 33 36 / 28%);
+}
 
-  /* #Showstutable  ,#Showstutable tr td,#Showstutable tr  th{
+/* #Showstutable  ,#Showstutable tr td,#Showstutable tr  th{
     border: 1px solid gray;
   } */
-
-  #showstu{
-    width: 90%;
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
+#Showstutable{
+  background-color: white;
 }
-#Showstutable , #Showstutable tr, #Showstutable th, #Showstutable td{
+#mainf{
+  display: flex;
+  justify-content: center;
+}
+#hea{
+  width: 90%;
+}
+#delbtn{
+  border: none;
+  cursor: pointer;
+  background-color: white;
+}
+#delbtn:hover{
+  color:white;
+  background-color: gray;
+}
+#showstu {
+  width: 90%;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+#Showstutable,
+#Showstutable tr,
+#Showstutable th,
+#Showstutable td {
   border: 1px solid gray;
 }
-#Showstutable th,#Showstutable td{
+#Showstutable th,
+#Showstutable td {
   text-align: center;
- }
- #Showstutable tr, #Showstutable th, #Showstutable td{
+}
+#Showstutable tr,
+#Showstutable th,
+#Showstutable td {
+  border: 1px solid gray;
+  border-style: solid;
+  text-align: center;
+}
+#showstuflex {
+  display: flex;
+  justify-content: center;
+}
+#showstu {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+}
+#Showstutable {
+}
+
+nav {
+  height: 65px;
+  display: flex;
+  box-shadow: 0 1px 6px 0 rgb(32 33 36 / 28%);
+  background-color: white;
+}
+
+#navSub1 {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#navSub2 {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+#navSub2 li {
+  width: 20%;
+}
+.forMobFriendly {
+  display: none;
+}
+.navFloating {
+  float: right;
+  background-color: white !important;
+  color: black !important;
+  border-color: white !important;
+}
+.navli1Media {
+  width: 100% !important;
+  padding: 10px 10px;
+  border-bottom: 1px solid gray;
+  cursor: pointer;
+}
+.navli2Media {
+  width: 100% !important;
+  padding: 10px 10px;
+  border-bottom: 1px solid gray;
+  cursor: pointer;
+}
+.navli3Media {
+  width: 100% !important;
+  padding: 10px 10px;
+  border-bottom: 1px solid gray;
+  cursor: pointer;
+}
+.navli4Media {
+  width: 100% !important;
+  padding: 10px 10px;
+  border-bottom: 1px solid gray;
+  cursor: pointer;
+}
+.navli1,
+.navli2,
+.navli3,
+.navli4 {
+  display: block;
+  cursor: pointer;
+  text-align: center;
+}
+.navli1::after,
+.navli2::after,
+.navli3::after,
+.navli4::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: gray;
+  transition: width 0.3s;
+}
+.navli1:hover:after,
+.navli2:hover::after,
+.navli3:hover::after,
+.navli4:hover::after {
+  width: 100%;
+}
+.navli1Media:hover,
+.navli2Media:hover,
+.navli3Media:hover,
+.navli4Media:hover {
+  box-shadow: 5px 5px 15px gray;
+}
+@media only screen and (max-width: 1024px) {
+  .forMobFriendly {
+    display: block;
+  }
+  .navli1,
+  .navli2,
+  .navli3,
+  .navli4 {
+    display: none;
+  }
+}h3{
+  margin-top: 30px !important;
+}
+
+
+@media only screen and (max-width: 570px) {
+  #Showstutable{
+    width: 100%;
+  }
+  #Showstutable , #Showstutable tr, #Showstutable th, #Showstutable td{
     border: 1px solid gray;
-    border-style: solid;
+  }
+  #Showstutable th,#Showstutable td{
     text-align: center;
   }
-  #showstuflex{
-    display: flex;
-    justify-content: center;
+  #Showstutable th{
+    font-size: 12px;
+  
   }
-  #showstu{
-    width: 90%;
-    display: flex;
-    justify-content: center;
-  } 
-  #Showstutable{
-    
+  #Showstutable td{
+    text-align: center;
+    font-size: 9px;
   }
+}

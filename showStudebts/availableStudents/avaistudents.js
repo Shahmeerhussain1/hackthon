@@ -46,8 +46,8 @@ querySnapshot.forEach((doc) => {
 <td>${doc.data().cnic}</td>
 <td>${doc.data().coursename}</td>
 <td>${doc.data().rollno}</td>
-<td><button onclick="deletess('${doc.id}')">Delete</button></td>
-<td><button onclick="upd('${doc.id}')">update</button></td>
+<td><button id="delbtn" onclick="deletess('${doc.id}')">Delete</button></td>
+<td><button id="delbtn" onclick="upd('${doc.id}')">update</button></td>
 </tr>`
 });
 
@@ -56,7 +56,7 @@ const deletess = async (ids) => {
     location.reload();
   };
 const upd=(did)=>{
-    
+    swal("Under Construction")
 }
 
 window.deletess =deletess
@@ -78,3 +78,7 @@ window.addstudents = addstudents;
 window.createclass = createclass;
 window.availablestudents = availablestudents;
 window.attendence = attendence;
+const back=()=>{
+  window.location="/showStudebts/show.html"
+}
+window.back=back

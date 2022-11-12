@@ -23,13 +23,25 @@ nav {
 .cclasformflex{
   display: flex;
   justify-content: center;
-  height: 500px;
+  height: 550px;
   align-items: center;
   /* width: 300px !important; */
-  background-color: #F5F6F8;
 }
 .cclasform{
-  width: 400px;
+  /* background-color:white; */
+  /* box-shadow: 100px  80px 80px 125px white; */
+  width: 520px;
+  height: fit-content;
+  
+  /* background-color: #ffff; */
+  /* border: 0.5px solid lightgray;
+  box-shadow: 5px 5px 15px gray; */
+}
+#Createnewstudentbtn{
+  margin-top: 15px;
+  border-radius: 20px;
+  color: white;
+  background-color: gray !important;
 }
 #registerstubtn{
   display: flex;
@@ -233,13 +245,16 @@ nav {
 .inpflx{
   display: flex;
   justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
   margin-top: 8px;
+  /* background-color: lightgray; */
 }
 .inpflx input{
   border: 0.5px solid lightgray;
-  padding: 5px 7px;
+  padding: 7px 7px;
   width: 60%;
+  background-color: #DEDEDE;
   /* border-radius: 15px; */
 }
 .inpflx input:focus{
@@ -258,6 +273,7 @@ nav {
 width: 60%;
 cursor: pointer;
 height: 36px;
+background-color: #ffff;
 }
 .border{
   display: flex;
