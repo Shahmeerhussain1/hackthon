@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,23 @@
     <link rel="stylesheet" href="addStu.css">
     <title>Add new students</title>
 </head>
+
 <body>
+    <!-- loader -->
+    <div id="main_loader">
+        <div id="loader">
+            <div class="loader">
+                <svg id="loading-spinner" width="80" height="80" viewBox="0 0 80 80" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <circle id="loading-circle-large" cx="40" cy="40" r="36" stroke="#005CB9" stroke-width="8" />
+                </svg>
+                <h1>
+                    <h3 style="text-align: center;">Please Wait...</h3>
+                </h1>
+            </div>
+        </div>
+    </div>
+    <!-- ooo -->
     <nav>
 
     </nav>
@@ -16,14 +33,46 @@
             <h1 class="addnewuserh1">Register New students</h1>
             <div id="frmnewstuflex">
                 <div id="frmnewstu">
-                    
-                
+                    <div class="cclasformflex">
+                        <div class="cclasform">
+                            <label id="Class_timings">NAME :
+                                <input type="text" id="name" placeholder="SHAHMEER...">
+                            </label><br>
+                            <label id="Teacher_name">FATHER NAME :
+                                <input type="text" id="fathername" placeholder="BASHIR...">
+                            </label><br>
+                            <label id="Section_name">ROLL NO :
+                                <input type="text" id="rollno" placeholder="0-9 + A-Z">
+                            </label><br>
+                            <label id="Course_name">CONTACT :
+                                <input type="number" id="contact" placeholder="###########">
+                            </label><br>
+                            <label id="Batch_Number">CNIC :
+                                <input type="text" id="cnic" placeholder="#####-#######-#">
+                            </label><br>
+                            <label id="Teacher_name">PICTURE :
+                                <input type="file" id="poto">
+                            </label><br>
+                            <label id="Teacher_name">COURSE NAME :
+                                <input type="text" id="coursename" placeholder="W & M ...">
+                            </label><br>
+                            <label id="Teacher_name">CLASS NAME :
+                                <input type="text" id="classname" placeholder="Teacher Name">
+                            </label><br>
+                            <div id="registerstubtn">
+                                <button id="Createnewstudentbtn">ADD</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
 
-    <script src="additionnewstudents.js"></script>
+    <script src="additionnewstudents.js" type="module"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 </body>
+
 </html>

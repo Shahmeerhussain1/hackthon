@@ -101,6 +101,10 @@ nav {
 #classesavailabletr th,#classesavailabletr td{
   text-align: center;
 }
+h3{
+  margin-top: 50px !important;
+  text-align: center;
+}
 
 
 
