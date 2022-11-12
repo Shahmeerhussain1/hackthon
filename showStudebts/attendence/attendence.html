@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,11 +10,12 @@
 
     <title>Attendence</title>
 </head>
+
 <body>
     <nav>
         <div id="navSub1">
             <div id="navLogo">
-                <h1 onclick="back()" style="cursor: pointer;">ADMIN</h1>
+                <h1 onclick="back()" style="cursor: pointer;color: white;">ADMIN</h1>
             </div>
         </div>
         <div id="navSub2">
@@ -40,36 +42,42 @@
         </div>
     </nav>
     <div id="uppr">
-        <div id="lowr"><h3>Attedence</h3>
-            <hr></div>
+        <div id="lowr">
+            <h3>Attedence</h3>
+            <hr>
+        </div>
     </div>
     <div id="upflex">
         <div id="finder">
-            <div id="inp"> <label for="">Enter Roll Number <input type="text"></label></div>
-           <div id="file">
-            <div id="foto">
-                <img src="/imgs/pr.jpg" alt="">
+            <div id="inp"> <label for=""> <input type="text" id="rno" placeholder="Enter Roll No"><button
+                        id="search">Search</button></label></div>
+            <div id="file">
+
+                <!-- <div id="rollno" class="same"> -->
+                <!-- <b>Attendence</b> <div class="dropdown">
+                    <button class="dropbtn">Dropdown</button>
+                    <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                    </div>
+                  </div>  -->
             </div>
-            <div id="name">
-                NAME : Shahmeer
-            </div>
-            <div id="fname">
-                FATHER NAME : Bashir
-            </div>
-            <div id="cnic"></div>
-            <div id="class"></div>
-            <div id="course"></div>
-            <div id="rollno"></div>
 
 
-           </div>
         </div>
     </div>
-    
-    
+    </div>
+    </div>
+    </div>
 
-    <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/6b3a62954b.js" crossorigin="anonymous"></script>
-<script src="attendence.js"></script>
+    <script type="module" src="attendence.js"></script>
+
 </body>
+
 </html>

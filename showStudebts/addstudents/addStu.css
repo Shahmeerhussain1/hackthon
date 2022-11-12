@@ -6,7 +6,11 @@ nav {
   height: 65px;
   display: flex;
   box-shadow: 0 1px 6px 0 rgb(32 33 36 / 28%);
-  background-color: #ffff;
+  background-color:#563D7C ;
+  color: white;
+}
+#Createnewstudentbtn{
+  background-color: #563D7C !important;
 }
 #addnewuserflex{
     display: flex;
@@ -24,6 +28,7 @@ nav {
   display: flex;
   justify-content: center;
   height: 550px;
+  background-color: white;
   align-items: center;
   /* width: 300px !important; */
 }
@@ -49,9 +54,9 @@ nav {
   justify-content: center;
 }
 #registerstubtn button{
-  width: 80%;
+  width: 100%;
   border: none;
-  background-color: white;
+  background-color: #563D7C !important;
   padding: 5px 9px;
   border: 1px solid gray;
 }
@@ -177,6 +182,9 @@ nav {
 }
 #navSub2 li {
   width: 20%;
+  /* background-color: #563D7C;
+   */
+color: white;
 }
 .forMobFriendly {
   display: none;
@@ -192,21 +200,26 @@ nav {
   padding: 10px 10px;
   border-bottom: 1px solid gray;
   cursor: pointer;
+  color: black !important;
+
 }
 .navli2Media {
   width: 100% !important;
+  color: black !important;
   padding: 10px 10px;
   border-bottom: 1px solid gray;
   cursor: pointer;
 }
 .navli3Media {
   width: 100% !important;
+  color: black !important;
   padding: 10px 10px;
   border-bottom: 1px solid gray;
   cursor: pointer;
 }
 .navli4Media {
   width: 100% !important;
+  color: black !important;
   padding: 10px 10px;
   border-bottom: 1px solid gray;
   cursor: pointer;
@@ -218,6 +231,7 @@ nav {
   display: block;
   cursor: pointer;
   text-align: center;
+  color: white;
 }
 .navli1::after,
 .navli2::after,
@@ -229,11 +243,15 @@ nav {
   height: 2px;
   background: gray;
   transition: width 0.3s;
+  color: white;
+
 }
 .navli1:hover:after,
 .navli2:hover::after,
 .navli3:hover::after,
 .navli4:hover::after {
+  color: white;
+
   width: 100%;
 }
 .navli1Media:hover,
@@ -241,6 +259,7 @@ nav {
 .navli3Media:hover,
 .navli4Media:hover {
   box-shadow: 5px 5px 15px gray;
+
 }
 .inpflx{
   display: flex;
