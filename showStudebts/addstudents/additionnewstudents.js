@@ -40,50 +40,33 @@ let poto = document.getElementById("poto");
 let coursename = document.getElementById("coursename");
 let classname = document.getElementById("classname");
 let Createnewstudentbtn = document.getElementById("Createnewstudentbtn");
+let main_loader = document.getElementById("main_loader");
+let Gfather = document.getElementById("Gfather");
 
-let getsurl = (loc , file) => {
-  return (new Promise(function (reject, resolve) {
+main_loader;
+
+let getsurl = (lo, file) => {
+  return new Promise(function (reject, resolve) {
     const storage = getStorage();
-    const storageRef = ref(storage, `images/${loc}.jpg`);
-    
+    const storageRef = ref(storage, `images/${lo}.jpg`);
     const uploadTask = uploadBytesResumable(storageRef, file);
-    
-    // Register three observers:
-    // 1. 'state_changed' observer, called any time the state changes
-    // 2. Error observer, called on failure
-    // 3. Completion observer, called on successful completion
-    uploadTask.on('state_changed', 
-      (snapshot) => {
-        // Observe state change events such as progress, pause, and resume
-        // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
-        const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-        console.log('Upload is ' + progress + '% done');
-        switch (snapshot.state) {
-          case 'paused':
-            console.log('Upload is paused');
-            break;
-          case 'running':
-            console.log('Upload is running');
-            break;
-        }
-      }, 
+    uploadTask.on(
+      "state_changed",
+      (snapshot) => {},
       (error) => {
-        reject(error)
-      }, 
+        reject(error);
+      },
       () => {
-        // Handle successful uploads on complete
-        // For instance, get the download URL: https://firebasestorage.googleapis.com/...
         getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
-            resolve(downloadURL)
-          console.log('File available at', downloadURL);
+          resolve(downloadURL);
         });
       }
     );
-      }
-    ))}
+  });
+};
 
 Createnewstudentbtn.addEventListener("click", async () => {
-  if (name) {
+  if (name.value) {
     if (fathername.value) {
       if (rollno.value) {
         if (contact.value) {
@@ -91,20 +74,29 @@ Createnewstudentbtn.addEventListener("click", async () => {
             if (poto.files.length == 1) {
               if (coursename.value) {
                 if (classname.value) {
-                  console.log( poto.files[0])
-
-                  let potourl = await getsurl(rollno.value, poto.files[0]);
-                  console.log(potourl)
-                //   await setDoc(doc(db, "Students", rollno.value), {
-                //     name: name.value,
-                //     fathername: fathername.value,
-                //     rollno: rollno.value,
-                //     contact: contact.value,
-                //     cnic: cnic.value,
-                //     photo: potourl,
-                //     coursename: coursename.value,
-                //     classname: classname.value,
-                //   });
+                  main_loader.style.display = "block";
+                  Gfather.style.display = "none";
+                  // let potourl = await getsurl(rollno.value, poto.files[0]);
+                  // console.log(potourl)
+                  const docRef = await addDoc(collection(db, "Students"), {
+                    Name: name.value,
+                    Fathername: fathername.value,
+                    rollno: rollno.value,
+                    contact: contact.value,
+                    cnic: cnic.value,
+                    // photo: potourl,
+                    coursename: coursename.value,
+                    classname: classname.value,
+                  });
+                  name.value = "";
+                  fathername.value = "";
+                  rollno.value = "";
+                  contact.value = "";
+                  cnic.value = "";
+                  coursename.value = "";
+                  classname.value = "";
+                  main_loader.style.display = "none";
+                  Gfather.style.display = "block";
                 } else {
                   swal("Invalid Inptus");
                 }
@@ -130,3 +122,19 @@ Createnewstudentbtn.addEventListener("click", async () => {
     swal("Invalid Inptus");
   }
 });
+const addstudents = () => {
+  window.location = "/showStudebts/addstudents/add.html";
+};
+const createclass = () => {
+  window.location = "/showStudebts/createClass/crClass.html";
+};
+const availablestudents = () => {
+  window.location = "/showStudebts/availableStudents/regesterdstudents.html";
+};
+const attendence = () => {
+  window.location = "/showStudebts/attendence/attendence.html";
+};
+window.addstudents = addstudents;
+window.createclass = createclass;
+window.availablestudents = availablestudents;
+window.attendence = attendence;

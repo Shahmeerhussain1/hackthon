@@ -31,18 +31,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-const addstudents = () => {
-  window.location = "/showStudebts/addstudents/add.html";
-};
-const createclass = () => {
-  window.location = "/showStudebts/createClass/crClass.html";
-};
-const availablestudents = () => {
-  window.location = "/showStudebts/availableStudents/regesterdstudents.html";
-};
-const attendence = () => {
-  window.location = "/showStudebts/attendence/attendence.html";
-};
+
 
 let classesavailabletr = document.getElementById("classesavailabletr");
 
@@ -55,8 +44,8 @@ querySnapshot.forEach((doc) => {
     <td>${doc.data().courseName}</td>
     <td>${doc.data().teacherName}</td>
     <td>${doc.data().scetionName}</td>
-    <td><button onclick="edits('${doc.id}')">Update</button></td>
-    <td><button onclick="deletes('${doc.id}')">delete</button></td>
+    <td><button id="delbtn" onclick="edits('${doc.id}')">Update</button></td>
+    <td><button id="delbtn" onclick="deletes('${doc.id}')">delete</button></td>
 </tr>
     `;
 });
@@ -74,6 +63,22 @@ const deletes = async (ids) => {
 
 window.edits = edits;
 window.deletes = deletes;
+
+
+
+
+const addstudents = () => {
+  window.location = "/showStudebts/addstudents/add.html";
+};
+const createclass = () => {
+  window.location = "/showStudebts/createClass/crClass.html";
+};
+const availablestudents = () => {
+  window.location = "/showStudebts/availableStudents/regesterdstudents.html";
+};
+const attendence = () => {
+  window.location = "/showStudebts/attendence/attendence.html";
+};
 window.addstudents = addstudents;
 window.createclass = createclass;
 window.availablestudents = availablestudents;

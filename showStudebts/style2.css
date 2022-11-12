@@ -1,8 +1,13 @@
+body{
+  background-color: #F5F6F8 !important;
+}
 nav {
   height: 65px;
   display: flex;
   box-shadow: 0 1px 6px 0 rgb(32 33 36 / 28%);
+  background-color: white;
 }
+
 #navSub1 {
   width: 50%;
   display: flex;
@@ -97,14 +102,33 @@ nav {
 }
 #classesavailabletr , #classesavailabletr tr, #classesavailabletr th, #classesavailabletr td{
   border: 1px solid gray;
+ 
 }
 #classesavailabletr th,#classesavailabletr td{
   text-align: center;
+  background-color: white;
 }
+
 h3{
-  margin-top: 50px !important;
+  margin-top: 30px !important;
   text-align: center;
 }
+#wiupper{
+  display: flex;
+  justify-content: center;
+}
+#wi{
+  width: 90%;
+}
+#delbtn{
+  border: none;
+  cursor: pointer;
+  background-color: white;
+}
+#delbtn:hover{
+  color:white;
+  background-color: gray;
+}
 
 
 
@@ -113,7 +137,25 @@ h3{
 
 
 
-
+@media only screen and (max-width: 570px) {
+  #classesavailable{
+    width: 100%;
+  }
+  #classesavailabletr , #classesavailabletr tr, #classesavailabletr th, #classesavailabletr td{
+    border: 1px solid gray;
+  }
+  #classesavailabletr th,#classesavailabletr td{
+    text-align: center;
+  }
+  #classesavailabletr th{
+    font-size: 12px;
+  
+  }
+  #classesavailabletr td{
+    text-align: center;
+    font-size: 9px;
+  }
+}
 
 @media only screen and (max-width: 1024px) {
   .forMobFriendly {

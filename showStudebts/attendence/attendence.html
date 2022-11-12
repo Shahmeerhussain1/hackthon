@@ -4,13 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="atten.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+
     <title>Attendence</title>
 </head>
 <body>
+    <nav>
+        <div id="navSub1">
+            <div id="navLogo">
+                <h1>ADMIN</h1>
+            </div>
+        </div>
+        <div id="navSub2">
+            <li class="navli1" onclick="addstudents()">Add students</li>
+            <li class="navli2" onclick="createclass()">Create Class</li>
+            <li class="navli3" onclick="availablestudents()">Registered students</li>
+            <li class="navli4" onclick="attendence()">Attendence</li>
+
+            <li class="forMobFriendly"> <button class="btn btn-primary navFloating" type="button"
+                    data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
+                    aria-controls="offcanvasScrolling"><i class="fa-solid fa-bars"></i></button></li>
+            <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                <div class="offcanvas-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <li class="navli1Media" onclick="addstudents()">Add students</li>
+                    <li class="navli2Media" onclick="createclass()">Create Class</li>
+                    <li class="navli3Media" onclick="availablestudents()">Registered students</li>
+                    <li class="navli4Media" onclick="attendence()">Attendence</li>
+                </div>
+            </div>
+        </div>
+    </nav>
     <h1>Attedence</h1>
     
 
-
+    <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/6b3a62954b.js" crossorigin="anonymous"></script>
 <script src="attendence.js"></script>
 </body>
 </html>
