@@ -10,38 +10,65 @@
 </head>
 
 <body>
-    <nav></nav>
-    <div id="classcreateflex">
-        <div id="classcreate">
-            <h1 class="createclasshead">Create New Class</h1>
-            <div class="cclasformflex">
-                <div class="cclasform">
-                    <label id="Class_timings">CLASS TIMINGS :
-                        <input type="text" placeholder="HOUR + AM/PM">
-                    </label><br>
-                    <label id="Teacher_name">TEACHER NAME :
-                        <input type="text" placeholder="Ghous Ahmed...">
-                    </label><br>
-                    <label id="Section_name">SECTION NAME :
-                        <input type="text" placeholder="A-F">
-                    </label><br>
-                    <label id="Course_name">COURSE NAME :
-                        <input type="text" placeholder="W&M">
-                    </label><br>
-                    <label id="Batch_Number">BATCH NUMBER :
-                        <input type="number" placeholder="1-9">
-                    </label><br>
-                    <!-- <label id="Teacher_name">TEACHER NAME :
+    <!-- loader -->
+    <div id="main_loader">
+        <div id="loader">
+            <div class="loader">
+                <svg id="loading-spinner" width="80" height="80" viewBox="0 0 80 80" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <circle id="loading-circle-large" cx="40" cy="40" r="36" stroke="#005CB9" stroke-width="8" />
+                </svg>
+                <h1>
+                    <h3 style="text-align: center;">Please Wait...</h3>
+                </h1>
+            </div>
+        </div>
+    </div>
+    <!-- ooo -->
+    <div id="alllllmain">
+        <nav></nav>
+        <div id="classcreateflex">
+            <div id="classcreate">
+                <h1 class="createclasshead">Create New Class</h1>
+                <div class="cclasformflex">
+                    <div class="cclasform">
+                        <label id="Class_timings">CLASS TIMINGS :
+                            <input type="text" id="classTiming" placeholder="HOUR + AM/PM">
+                        </label><br>
+                        <label id="Teacher_name">TEACHER NAME :
+                            <input type="text" id="teacherName" placeholder="Ghous Ahmed...">
+                        </label><br>
+                        <label id="Section_name">SECTION NAME :
+                            <input type="text" id="scetionName" placeholder="A-F">
+                        </label><br>
+                        <label id="Course_name">COURSE NAME :
+                            <input type="text" id="courseName" placeholder="W&M">
+                        </label><br>
+                        <label id="Batch_Number">BATCH NUMBER :
+                            <input type="number" id="batchNumber" placeholder="1-9">
+                        </label><br>
+                        <!-- <label id="Teacher_name">TEACHER NAME :
                         <input type="text" placeholder="Teacher Name">
                     </label><br> -->
 
+                        <div id="registerstubtn">
+                            <button id="Createclassbtn">Create</button>
+                        </div>
+                    </div>
 
                 </div>
             </div>
         </div>
     </div>
 
-    <script src="createclass.js"></script>
+
+
+   
+
+
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script type="module" src="createclass.js"></script>
 </body>
 
 </html>

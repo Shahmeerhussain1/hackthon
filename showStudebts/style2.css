@@ -84,12 +84,22 @@ nav {
   box-shadow: 5px 5px 15px gray;
 }
 #flexforclasses{
+  margin-top: 20px;
     display: flex;
     justify-content: center;
 }
+
 #classesavailable{
     width: 90%;
     margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+#classesavailabletr , #classesavailabletr tr, #classesavailabletr th, #classesavailabletr td{
+  border: 1px solid gray;
+}
+#classesavailabletr th,#classesavailabletr td{
+  text-align: center;
 }
 
 
