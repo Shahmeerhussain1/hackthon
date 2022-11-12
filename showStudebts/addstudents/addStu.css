@@ -1,0 +1,18 @@
+body {
+  margin: 0 auto;
+}
+nav {
+  height: 65px;
+  display: flex;
+  box-shadow: 0 1px 6px 0 rgb(32 33 36 / 28%);
+}
+#addnewuserflex{
+    display: flex;
+    justify-content: center;
+}
+#addnewuser{
+    width: 90%;
+}
+.addnewuserh1{
+    text-align: center;
+}

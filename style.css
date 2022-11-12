@@ -1,0 +1,44 @@
+#singninFlex {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#signin {
+    border: 1px solid black;
+    height: 300px;
+    box-shadow: 10px 10px 25px gray;
+    width: 350px;
+
+}
+
+#signinheading {
+    margin: 15px 5px;
+}
+
+#signinheading h1 {
+    text-align: center;
+}
+
+#fiels {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#Signemail,
+#Signpasswrd {
+    width: 280px;
+    padding: 10px 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 2px solid gray;
+}
+
+#Signemail:focus,
+#Signpasswrd:focus {
+    outline: none;
+}

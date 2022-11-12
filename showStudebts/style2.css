@@ -1,0 +1,114 @@
+nav {
+  height: 65px;
+  display: flex;
+  box-shadow: 0 1px 6px 0 rgb(32 33 36 / 28%);
+}
+#navSub1 {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#navSub2 {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+#navSub2 li {
+  width: 20%;
+}
+.forMobFriendly {
+  display: none;
+}
+.navFloating {
+  float: right;
+  background-color: white !important;
+  color: black !important;
+  border-color: white !important;
+}
+.navli1Media {
+  width: 100% !important;
+  padding: 10px 10px;
+  border-bottom: 1px solid gray;
+  cursor: pointer;
+}
+.navli2Media {
+  width: 100% !important;
+  padding: 10px 10px;
+  border-bottom: 1px solid gray;
+  cursor: pointer;
+}
+.navli3Media {
+  width: 100% !important;
+  padding: 10px 10px;
+  border-bottom: 1px solid gray;
+  cursor: pointer;
+}
+.navli4Media {
+  width: 100% !important;
+  padding: 10px 10px;
+  border-bottom: 1px solid gray;
+  cursor: pointer;
+}
+.navli1,
+.navli2,
+.navli3,
+.navli4 {
+  display: block;
+  cursor: pointer;
+  text-align: center;
+}
+.navli1::after,
+.navli2::after,
+.navli3::after,
+.navli4::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: gray;
+  transition: width 0.3s;
+}
+.navli1:hover:after,
+.navli2:hover::after,
+.navli3:hover::after,
+.navli4:hover::after {
+  width: 100%;
+}
+.navli1Media:hover,
+.navli2Media:hover,
+.navli3Media:hover,
+.navli4Media:hover {
+  box-shadow: 5px 5px 15px gray;
+}
+#flexforclasses{
+    display: flex;
+    justify-content: center;
+}
+#classesavailable{
+    width: 90%;
+    margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 1024px) {
+  .forMobFriendly {
+    display: block;
+  }
+  .navli1,
+  .navli2,
+  .navli3,
+  .navli4 {
+    display: none;
+  }
+}
